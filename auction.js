@@ -88,6 +88,7 @@ function calculateFairSalary() {
     return fairSalary;
 }
 
+
 function submitOffer() {
     const playerBid = getPlayerBid();
     const fairSalary = calculateFairSalary();
@@ -101,3 +102,8 @@ function determineOutcome(playerBid, fairSalary) {
         displayLoss();
     }
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const submitButton = document.getElementById('submitButton');
+    submitButton.addEventListener('click', submitOffer);
+});
