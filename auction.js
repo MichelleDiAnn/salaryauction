@@ -88,13 +88,6 @@ function calculateFairSalary() {
     return fairSalary;
 }
 
-
-function submitOffer() {
-    const playerBid = getPlayerBid();
-    const fairSalary = calculateFairSalary();
-    determineOutcome(playerBid, fairSalary);
-}
-
 function determineOutcome(playerBid, fairSalary) {
     if (playerBid >= fairSalary) {
         displayWin(playerBid, fairSalary); 
@@ -102,6 +95,15 @@ function determineOutcome(playerBid, fairSalary) {
         displayLoss();
     }
 }
+
+function submitOffer() {
+    const playerBid = getPlayerBid();
+    const fairSalary = calculateFairSalary();
+    determineOutcome(playerBid, fairSalary);
+    console.log('Button clicked!');
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const submitButton = document.getElementById('submitButton');
