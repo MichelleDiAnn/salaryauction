@@ -1,3 +1,4 @@
+console.log("Script loaded!");
 const baseSalary = 175000;
 const remoteModifierMax = 50000;
 const meetingPenalty = 1000;
